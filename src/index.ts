@@ -31,7 +31,7 @@ const MONGO_URL = 'mongodb+srv://dafewealth:FMAIpRhKanWKAzex@huiospay.rtqv4hf.mo
 mongoose.Promise = Promise;
 mongoose.set("strictQuery", false);
 mongoose.connect(MONGO_URL);
-console.log(`Database connected successfully:`);
+console.log(`Database connected successfully:`)
 mongoose.connection.on('error', (error: Error) => console.log(error));
 
 app.use('/', router());
