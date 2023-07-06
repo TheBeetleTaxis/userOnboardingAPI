@@ -24,6 +24,8 @@ server.listen(3000, () => {
   console.log('Server running on http://localhost:3000/');
 });
 
+app.get('/', (req, res) => res.send('API is up and running....'));
+
 const MONGO_URL = 'mongodb+srv://dafewealth:FMAIpRhKanWKAzex@huiospay.rtqv4hf.mongodb.net/?retryWrites=true&w=majority'; // DB URI
 
 
