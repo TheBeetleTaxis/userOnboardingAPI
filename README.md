@@ -1,63 +1,62 @@
+# MERN Authentication Starter
 
-Features:
+This is a starter app for a MERN stack application with authentication. This is for a SPA (Single Page Application) workflow that uses the [Vite](https://vite.dev) Build tool. This authentication workflow is based off of my [MERN Stack From Scratch | eCommerce](https://www.traversymedia.com/mern-stack-from-scratch) course.
 
-- Environment, Typescript, Nodemon setup
-- MongoDB & Mongoose connect, Database creation
-- Controllers creation
-- Middlewares creation
-- Cookie based authentication
-- Postman testing
-- Create, Read, Update, Delete
+<img src="./frontend/public/screen.png" />
 
+It includes the following:
 
-### Prerequisites
+- Backend API with Express & MongoDB
+- Routes for auth, logout, register, profile, update profile
+- JWT authentication stored in HTTP-only cookie
+- Protected routes and endpoints
+- Custom middleware to check JSON web token and store in cookie
+- Custom error middleware
+- React frontend to register, login, logout, view profile, and update profile
+- React Bootstrap UI library
+- React Toastify notifications
 
-**Node version 14.x**
+## Usage
 
-### Clone the repository
+- Create a MongoDB database and obtain your `MongoDB URI` - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/register)
+- Create a PayPal account and obtain your `Client ID` - [PayPal Developer](https://developer.paypal.com/)
 
+### Env Variables
 
+Rename the `.env.example` file to `.env` and add the following
 
-### Install packages
+```
+NODE_ENV = development
+PORT = 5000
+MONGO_URI = your mongodb uri
+JWT_SECRET = 'abc123'
+```
 
+Change the JWT_SECRET to what you want
 
+### Install Dependencies (frontend & backend)
+
+```
 npm install
+cd frontend
+npm install
+```
 
+### Run
 
+```
 
-### Start backend API
+# Run frontend (:3000) & backend (:5000)
+npm run dev
 
-npm start
- `App will be runinig on Port {3000}`
+# Run backend only
+npm run server
+```
 
+## Build & Deploy
 
-## Available commands
-
-Running commands with npm `npm run [command]`
-
-| command         | description                              |
-| :-------------- | :--------------------------------------- |
-| `start`         | Starts a development instance of the app |
-
-
-
-API Routes and responses
-| Routes          | Description                              |
-| :-------------- | :--------------------------------------- |
-| `start          | Starts a development instance of the app |
-
-![Register User route and response](https://github.com/TheBeetleTaxis/userOnboardingAPI/assets/79975424/6c455353-2d9c-4945-94bb-b9efbaa385ff)
-
-![API login route and response ](https://github.com/TheBeetleTaxis/userOnboardingAPI/assets/79975424/0a7a25a1-ba1e-4440-951c-f23732a402b5)
-
-
-
-![GET users route and response](https://github.com/TheBeetleTaxis/userOnboardingAPI/assets/79975424/36d5f33e-3250-4da6-9017-12eb4ffad417)
-
-![Update User by id](https://github.com/TheBeetleTaxis/userOnboardingAPI/assets/79975424/40b22c2a-495a-494a-a82b-a00de22adfef)
-
-![Delete User by ID](https://github.com/TheBeetleTaxis/userOnboardingAPI/assets/79975424/51e46de2-db37-447b-9437-103744554e64)
-
-
-
-
+```
+# Create frontend prod build
+cd frontend
+npm run build
+```
